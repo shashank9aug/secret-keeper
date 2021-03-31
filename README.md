@@ -21,3 +21,4 @@ views             # all frontend  files.(hbs)
  - Backend (NodeJs , ExpressJs)
  - Database (MongoDB , Mongoose)
  - Authentication
+ - cookies and sessions
