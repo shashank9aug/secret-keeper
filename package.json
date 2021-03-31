@@ -1,0 +1,22 @@
+{
+  "name": "secret_keeper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shashank-001/secret-keeper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shashank-001/secret-keeper/issues"
+  },
+  "homepage": "https://github.com/shashank-001/secret-keeper#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
