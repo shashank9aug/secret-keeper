@@ -80,6 +80,10 @@ form .txt_field{
     color: #a6a6a6;
     cursor: pointer;
 }
+
+.pass:hover{
+    text-decoration: underline;
+}
   
 input[type="submit"]{
     width: 100%;
@@ -111,4 +115,38 @@ input[type="submit"]:hover{
   
 .signup_link a:hover{
     text-decoration: underline;
+}
+
+.keep{
+    width: 500px;
+    height: 400px;
+    background: #b5c6dd;
+    border: 1px solid rgb(70, 101, 236);
+    border-radius: 10px;
+    margin-left: 400px;
+    margin-top: 110px;
+}
+#homehead{
+    text-align: center;
+    color: rgb(245, 248, 250);
+}
+.items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button:active{
+    text-shadow: none;
+    outline: none;
+}
+button{
+    padding: 10px;
+    margin-left: 190px; 
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+#logo{
+   width: 200px;
+   height: 200px;
 }

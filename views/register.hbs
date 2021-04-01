@@ -1,24 +1,29 @@
- {{> footer}}
-
+ {{> header}}
+<div class="center">
     <h1>Signup</h1>
-      <form method="post">
+      <form action="/register" method="post">
         <div class="txt_field">
-          <input type="text" required>
+          <input type="text" name="username" required>
           <span></span>
           <label>username</label>
         </div>
         <div class="txt_field">
-          <input type="text" required>
+          <input type="text" name="email" required>
           <span></span>
           <label>Email</label>
         </div>
         <div class="txt_field">
-          <input type="password" required>
+          <input type="password" name="password" required>
           <span></span>
           <label>Password</label>
         </div>
         <input type="submit" value="Signup">
         <div class="signup_link">
-          Not a member? <a href="#">Siginup</a>
+         <a href="#"></a>
         </div>
+       <div class="signup_link">
+           <a href="#"></a>
+        </div> 
+      </form>
+    </div> 
 {{> footer}}
