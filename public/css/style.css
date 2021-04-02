@@ -150,3 +150,16 @@ button{
    width: 200px;
    height: 200px;
 }
+
+.card{
+    width: 150px;
+    height: 30px;
+    background-color: #ffffff;
+    margin-left: 250px;
+    margin-top: 500px;
+    border-radius: 5px;
+    padding: 10px;
+}
+.card-body{
+    text-decoration: none;
+}

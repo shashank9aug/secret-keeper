@@ -2,13 +2,13 @@
 <div class="center">
     <h1>Signup</h1>
       <form action="/register" method="post">
-        <div class="txt_field">
+        {{!-- <div class="txt_field">
           <input type="text" name="username" required>
           <span></span>
           <label>username</label>
-        </div>
+        </div> --}}
         <div class="txt_field">
-          <input type="text" name="email" required>
+          <input type="text" name="username" required>
           <span></span>
           <label>Email</label>
         </div>
@@ -25,5 +25,15 @@
            <a href="#"></a>
         </div> 
       </form>
+    </div>
+    <div class="card">
+      <div class="social-block">
+        <div class="card-body">
+          <a class="btn" href="/auth/google" role="button">
+            <i class="google"></i>
+            Sign Up with Google
+          </a>
+        </div>
+      </div>
     </div> 
 {{> footer}}
