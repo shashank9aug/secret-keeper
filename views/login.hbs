@@ -19,7 +19,7 @@
         </div>
      </form>
      </div> 
-    <div class="card">
+    {{!-- <div class="card">
       <div class="social-block">
         <div class="card-body">
           <a class="btn" href="/auth/google" role="button">
@@ -28,5 +28,24 @@
           </a>
         </div>
       </div>
-    </div>    
+    </div>     --}}
+    <div class="card">
+      <div class="google-block">
+        <div class="card-body">
+          <img id="g-img" src="google.png" alt="img" >
+          <a class="btn" href="/auth/google" role="button">
+            <i class="google"></i>
+            login with Google
+          </a>
+        </div>
+        <br>
+        <div class="facebook-body">
+          <img id="f-img" src="facebook.png" alt="img">
+          <a class="btn" href="/auth/facebook" role="button">
+            <i class="google"></i>
+            login with Facebook
+          </a>
+        </div>
+      </div>
+    </div>
 {{> footer}}

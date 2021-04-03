@@ -42,7 +42,8 @@ mongoose.set("useCreateIndex",true)
 const userSchema = new mongoose.Schema({
     email:String,
     password:String,
-    googleId:String
+    googleId:String,
+    secret:String
 })
 
 //plugin will hash and salt the password then store it in db
@@ -67,7 +68,7 @@ passport.deserializeUser(function(id, done) {
  there is so much difference between https and http
    make sure in mind
 
- */  
+*/  
 
 
 passport.use(new GoogleStrategy({
@@ -77,7 +78,7 @@ passport.use(new GoogleStrategy({
     userProfileURL: 'https://www.googleapis.com/oauth2/v3/userinfo'
   },
   function(accessToken, refreshToken, profile, cb) {
-      console.log(profile)
+      //console.log(profile)
       User.findOrCreate({ googleId: profile.id }, function (err, user) {
       return cb(err, user);
     });
@@ -110,12 +111,51 @@ app.get('/register',(req,res)=>{
 })
 
 app.get("/secrets",(req,res)=>{
+    // if(req.isAuthenticated()){
+    //     res.render("secrets")
+    // } else {
+    //     res.redirect("/login");
+    // }
+
+    User.find({"secret": {$ne: null}}, function(err, foundUsers){
+        if(err){
+            console.log(err)
+        }
+        else{
+            if(foundUsers) {
+                res.render("secrets", {userWithSecret: foundUsers})
+            }
+        }
+    })
+
+});
+
+
+app.get("/submit",(req,res)=>{
     if(req.isAuthenticated()){
-        res.render("secrets")
+        res.render("submit")
     } else {
         res.redirect("/login");
     }
 });
+
+app.post("/submit",(req,res)=>{
+    const submittedSecret = req.body.secret;
+    console.log(req.user.id)
+
+    User.findById(req.user.id, function(err,foundUsers){
+        if(err){
+            console.log(err)
+        } else {
+            if(foundUsers){
+                foundUsers.secret = submittedSecret;
+                foundUsers.save(function(){
+                    res.redirect("/secrets")
+                })
+            }
+        }  
+    })
+})
 
 app.get("/logout",(req,res)=>{
     req.logout()

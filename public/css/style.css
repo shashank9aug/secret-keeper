@@ -152,14 +152,64 @@ button{
 }
 
 .card{
-    width: 150px;
-    height: 30px;
+    width: 200px;
+    height: 80px;
     background-color: #ffffff;
-    margin-left: 250px;
-    margin-top: 500px;
+    margin-left: 170px;
+    margin-top: 30px;
     border-radius: 5px;
     padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+#g-img,#f-img{
+   width: 25px;
+   height: 25px;
+}
+
 .card-body{
+    display: flex;
+    align-items: center;
+    outline: none;
     text-decoration: none;
+}
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}  
+a:active {    
+    text-decoration: none;
+}
+
+.create-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.form-control{
+    padding: 5px;
+    margin: 3px;
+    width: 300px;
+    height: 50px;
+   
+}
+.btn-dark{
+    margin-left: 0px;
+
+}
+#like-count{
+    text-decoration-color: white;
+    color:white;
+}
+
+#box{
+    height: 300px;
 }
